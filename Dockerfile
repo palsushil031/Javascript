@@ -5,7 +5,7 @@ WORKDIR /app
 
 #copy the package.json files inside the /app directory and install the necessary packages
 COPY package.json ./
-RUN npn install 
+RUN npm install 
 
 # copying the remaning files 
 COPY . .
@@ -15,6 +15,6 @@ COPY . .
 EXPOSE 3000
 
 # Start the application
-CMD [ "node", "index.js" ]
+CMD ["node", "index"]
 
 
